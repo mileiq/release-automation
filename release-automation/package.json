@@ -1,0 +1,41 @@
+{
+  "name": "release-automation",
+  "version": "1.0.0",
+  "description": "Automation for release process including TestRail, JIRA, and Confluence integration",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest",
+    "setup": "node setup.js"
+  },
+  "bin": {
+    "release-automation-setup": "./setup.js"
+  },
+  "keywords": [
+    "testrail",
+    "jira",
+    "confluence",
+    "github",
+    "release",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.2",
+    "octokit": "^3.1.1",
+    "testrail-api": "^1.3.6",
+    "jira-client": "^8.2.2",
+    "@atlassian/confluence-api": "^1.0.0",
+    "winston": "^3.11.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0"
+  },
+  "type": "module"
+}

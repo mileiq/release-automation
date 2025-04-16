@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  release-automation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: release-automation
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+    command: node src/index.js --check-interval 60
+    # Uncomment the following lines to process a specific release
+    # command: node src/index.js --release-tag v1.0.0
